@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CharacterController.cs" />
+     <Compile Include="Assets\Scripts\CreateLevels.cs" />
      <Compile Include="Assets\Scripts\DeathBoxController.cs" />
      <Compile Include="Assets\Scripts\GoalController.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
@@ -222,6 +223,9 @@
     </Reference>
     <Reference Include="UnityEditor">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.12f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem">
+        <HintPath>C:/Users/alber/RobotGame/Library/PackageCache/com.unity.connect.share@2.1.0/Plugins/System.IO.Compression.FileSystem.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.12f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -654,6 +658,15 @@
     </Reference>
     <Reference Include="com.unity.cinemachine.editor">
         <HintPath>C:/Users/alber/RobotGame/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Connect.Share.Editor">
+        <HintPath>C:/Users/alber/RobotGame/Library/ScriptAssemblies/Unity.Connect.Share.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEditorBridgeDev.001">
+        <HintPath>C:/Users/alber/RobotGame/Library/ScriptAssemblies/Unity.InternalAPIEditorBridgeDev.001.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.EditorCoroutines.Editor">
+        <HintPath>C:/Users/alber/RobotGame/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -7,7 +7,11 @@ public class TreeTimeController : ObjectTimeController
     // Start is called before the first frame update
     void Start()
     {
-        //this.GetComponent<SpriteRenderer>().sprite = sprites[objectTimeState];
+        if (objectTimeState == 2){
+             GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+        } else {
+            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+        }//this.GetComponent<SpriteRenderer>().sprite = sprites[objectTimeState];
     }
 
     // Update is called once per fram
