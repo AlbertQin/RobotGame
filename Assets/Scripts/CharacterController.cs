@@ -6,6 +6,7 @@ public class CharacterController : MonoBehaviour
 {
     [SerializeField] private LayerMask platformLayerMask;
     private CapsuleCollider2D capsuleCollider2d;
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,11 +22,19 @@ public class CharacterController : MonoBehaviour
     void Update()
     {
         var rigidvelo =  GetComponent<Rigidbody2D>().velocity;
+        animator.SetFloat("Speed",  Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
+        animator.SetBool("Grounded", IsGrounded());
         if (IsGrounded() && Input.GetButtonDown("Jump"))
         {
             rigidvelo = Vector2.up * jumpVelocity;
         }
         rigidvelo.x = moveSpeed * Input.GetAxis ("Horizontal");
+
+        if(Input.GetAxis("Horizontal") < 0){
+            transform.transform.GetComponent<SpriteRenderer>().flipX = true;
+        } else if (Input.GetAxis("Horizontal") > 0) {
+            transform.transform.GetComponent<SpriteRenderer>().flipX = false;
+        }
 
         GetComponent<Rigidbody2D>().velocity = rigidvelo;
     }
